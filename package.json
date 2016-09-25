@@ -11,13 +11,14 @@
     "@types/react": "^0.14.37",
     "@types/react-dom": "^0.14.17",
     "awesome-typescript-loader": "^2.2.4",
+    "react-hot-loader": "^3.0.0-beta.5",
     "source-map-loader": "^0.1.5",
     "typescript": "^2.0.3",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

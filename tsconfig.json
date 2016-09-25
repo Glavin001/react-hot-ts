@@ -8,7 +8,11 @@
         "jsx": "react"
     },
     "files": [
+        "./declarations.d.ts",
         "./src/components/Hello.tsx",
         "./src/index.tsx"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }

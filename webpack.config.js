@@ -1,7 +1,17 @@
+const webpack = require("webpack");
+const path = require("path");
+
 module.exports = {
-    entry: "./src/index.tsx",
+    entry: [
+        "react-hot-loader/patch",
+        "webpack-dev-server/client?http://localhost:3000",
+        "webpack/hot/only-dev-server",
+        "./src/index.tsx",
+    ],
     output: {
-        filename: "./dist/bundle.js",
+        path: path.join(__dirname, 'dist'),
+        filename: "bundle.js",
+        publicPath: "/static/",
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -12,10 +22,27 @@ module.exports = {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
 
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+    ],
+
     module: {
         loaders: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            { test: /\.tsx?$/, loader: "awesome-typescript-loader" }
+            {
+                test: /\.tsx?$/,
+                loaders: [
+                    "react-hot-loader/webpack",
+                    "awesome-typescript-loader"
+                ],
+                exclude: path.resolve(__dirname, 'node_modules'),
+                include: path.resolve(__dirname, "src"),
+            }
         ],
 
         preLoaders: [
@@ -32,4 +59,5 @@ module.exports = {
         "react": "React",
         "react-dom": "ReactDOM"
     },
+
 };
