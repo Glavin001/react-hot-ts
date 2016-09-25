@@ -10,13 +10,14 @@
   "devDependencies": {
     "@types/react": "^0.14.37",
     "@types/react-dom": "^0.14.17",
+    "awesome-typescript-loader": "^2.2.4",
     "source-map-loader": "^0.1.5",
-    "ts-loader": "^0.8.2",
     "typescript": "^2.0.3",
     "webpack": "^1.13.2"
   },
   "scripts": {
-    "start": "webpack",
+    "start": "webpack --watch",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
