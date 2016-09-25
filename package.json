@@ -1,0 +1,32 @@
+{
+  "name": "react-hot-ts",
+  "version": "0.1.0",
+  "description": "Demo of React Hot Reloading + TypeScript",
+  "main": "./dist/bundle.js",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^0.14.37",
+    "@types/react-dom": "^0.14.17",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "start": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glavin001/react-hot-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glavin001/react-hot-ts/issues"
+  },
+  "homepage": "https://github.com/Glavin001/react-hot-ts#readme"
+}
