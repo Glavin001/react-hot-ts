@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-export class Counter extends React.Component {
-  constructor(props) {
-    super(props);
+export class Counter extends React.Component<void, any> {
+  private interval: number;
+  constructor() {
+    super();
     this.state = { counter: 0 };
   }
 

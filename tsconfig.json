@@ -1,18 +1,52 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
+    	"allowJs": false,
+    	"allowSyntheticDefaultImports": false,
+    	"allowUnreachableCode": false,
+    	"allowUnusedLabels": false,
+    	"declaration": false,
+    	"diagnostics": true,
+    	"disableSizeLimit": true,
+    	"emitBOM": false,
+    	"emitDecoratorMetadata": true,
+    	"experimentalDecorators": true,
+    	"forceConsistentCasingInFileNames": true,
+    	"inlineSourceMap":false,
+    	"inlineSources": false,
+    	"isolatedModules": false,
+    	"jsx": "react",
+    	"lib": ["es5", "dom", "es2015.promise"],
+    	"listEmittedFiles": true,
+    	"listFiles": true,
         "module": "commonjs",
-        "target": "es5",
-        "jsx": "react"
+        "moduleResolution": "node",
+        "noEmit": false,
+        "noEmitHelpers": false,
+        "importHelpers": false,
+        "noEmitOnError": false,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitUseStrict": false,
+        "noLib": false,
+        "noResolve": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "./build",
+        "reactNamespace": "React",
+        "preserveConstEnums": true,
+        "pretty": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "target": "es5"
     },
-    "files": [
-        "./declarations.d.ts",
-        "./src/components/Hello.tsx",
-        "./src/index.tsx"
+    "include": [
+        "src/**/*"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "**/*.spec.ts"
     ]
 }

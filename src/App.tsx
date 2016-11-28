@@ -1,14 +1,20 @@
-import * as React from "react";
+import * as React from 'react';
+import {Layout} from './Layout';
 import {Counter} from './Counter';
 
-export default class App extends React.Component<any, any> {
-    render() {
-        return (
-            <div>
-                <h1>Hello world!</h1>
-                <div>Welcome to hot-reloading React written in TypeScript!</div>
-                <Counter />
-            </div>
-        );
-    }
+// If you use React Router, make this component
+// render <Router> with your routes. Currently,
+// only synchronous routes are hot reloaded, and
+// you will see a warning from <Router> on every reload.
+// You can ignore this warning. For details, see:
+// https://github.com/reactjs/react-router/issues/2182
+
+export class App extends React.Component<void, void> {
+  render() {
+    return (
+      <Layout>
+        <Counter />
+      </Layout>
+    );
+  }
 }
