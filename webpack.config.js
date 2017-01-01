@@ -23,11 +23,13 @@ module.exports = {
     },
 
     plugins: [
+        /*
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
+        */
         new webpack.HotModuleReplacementPlugin(),
     ],
 
@@ -56,8 +58,10 @@ module.exports = {
     // This is important because it allows us to avoid bundling all of our
     // dependencies, which allows browsers to cache those libraries between builds.
     externals: {
+        /*
         "react": "React",
         "react-dom": "ReactDOM"
+        */
     },
 
 };
