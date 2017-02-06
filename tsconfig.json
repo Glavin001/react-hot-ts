@@ -9,7 +9,7 @@
     },
     "files": [
         "./declarations.d.ts",
-        "./src/components/Hello.tsx",
+        "./node_modules/@types/webpack-env/index.d.ts",
         "./src/index.tsx"
     ],
     "exclude": [

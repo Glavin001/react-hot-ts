@@ -4,8 +4,6 @@ const path = require("path");
 module.exports = {
     entry: [
         "react-hot-loader/patch",
-        "webpack-dev-server/client?http://localhost:3000",
-        "webpack/hot/only-dev-server",
         "./src/index.tsx",
     ],
     output: {
@@ -19,15 +17,11 @@ module.exports = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                'NODE_ENV': JSON.stringify('production')
-            }
-        }),
+        new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
 
@@ -42,12 +36,13 @@ module.exports = {
                 ],
                 exclude: path.resolve(__dirname, 'node_modules'),
                 include: path.resolve(__dirname, "src"),
-            }
-        ],
-
-        preLoaders: [
+            },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { test: /\.js$/, loader: "source-map-loader" }
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
+            }
         ]
     },
 
@@ -59,5 +54,8 @@ module.exports = {
         "react": "React",
         "react-dom": "ReactDOM"
     },
+    devServer: {
+        hot: true
+    }
 
 };
