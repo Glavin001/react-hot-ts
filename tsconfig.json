@@ -5,13 +5,9 @@
         "noImplicitAny": true,
         "module": "commonjs",
         "target": "es5",
-        "jsx": "react"
-    },
-    "files": [
-        "./declarations.d.ts",
-        "./src/components/Hello.tsx",
-        "./src/index.tsx"
-    ],
+        "jsx": "react",
+        "baseUrl": "./src"
+     },
     "exclude": [
         "node_modules"
     ]
