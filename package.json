@@ -26,8 +26,8 @@
     "type": "git",
     "url": "git+https://github.com/Glavin001/react-hot-ts.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Glavin Wiechert",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Glavin001/react-hot-ts/issues"
   },
