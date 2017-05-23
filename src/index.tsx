@@ -3,24 +3,20 @@ import * as ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import App from "./App";
 
-const rootEl = document.getElementById("root");
-ReactDOM.render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  rootEl
-);
+const render = (Component: any) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('root')
+  );
+};
+
+render(App);
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept("./App", () => {
-    const NextApp = require<RequireImport>("./App").default;
-    ReactDOM.render(
-      <AppContainer>
-        <NextApp />
-      </AppContainer>
-      ,
-      rootEl
-    );
+  module.hot.accept('./App', () => {
+    render(App)
   });
 }
