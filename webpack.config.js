@@ -1,18 +1,18 @@
 const webpack = require("webpack");
 const path = require("path");
-const { CheckerPlugin } = require('awesome-typescript-loader')
+const { CheckerPlugin } = require("awesome-typescript-loader")
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
+    context: path.resolve(__dirname, "src"),
     entry: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8080',
-        './index.tsx'
+        "react-hot-loader/patch",
+        "webpack-dev-server/client?http://localhost:8080",
+        "./index.tsx"
     ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: "bundle.js",
-        publicPath: '/'
+        publicPath: "/"
     },
 
     devtool: "inline-source-map",
@@ -49,8 +49,8 @@ module.exports = {
 
     devServer: {
         hot: true,
-        contentBase: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        contentBase: path.resolve(__dirname, "dist"),
+        publicPath: "/"
     }
 
 };
