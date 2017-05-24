@@ -1,6 +1,5 @@
 const webpack = require("webpack");
 const path = require("path");
-//const { resolve } = require('path');
 const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
@@ -8,7 +7,6 @@ module.exports = {
     entry: [
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
         './index.tsx'
     ],
     output: {
@@ -17,11 +15,9 @@ module.exports = {
         publicPath: '/'
     },
 
-    // Enable sourcemaps for debugging webpack's output.
     devtool: "inline-source-map",
 
     resolve: {
-        // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
 
