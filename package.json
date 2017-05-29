@@ -24,7 +24,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "static": "static dist",
+    "static": "static -at 0.0.0.0 dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
