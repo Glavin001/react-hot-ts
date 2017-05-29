@@ -4,6 +4,9 @@
   "description": "Demo of React Hot Reloading + TypeScript",
   "main": "./dist/bundle.js",
   "dependencies": {
+    "expose-loader": "^0.7.3",
+    "html-webpack-plugin": "^2.28.0",
+    "node-static": "^0.7.9",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
@@ -19,7 +22,9 @@
     "webpack-dev-server": "^2.3.0"
   },
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server",
+    "static": "static dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
