@@ -4,22 +4,27 @@
   "description": "Demo of React Hot Reloading + TypeScript",
   "main": "./dist/bundle.js",
   "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "expose-loader": "^0.7.3",
+    "html-webpack-plugin": "^2.28.0",
+    "node-static": "^0.7.9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "@types/react": "^15.0.6",
-    "@types/react-dom": "^0.14.22",
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
     "@types/webpack-env": "^1.13.0",
-    "awesome-typescript-loader": "^3.0.3",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "source-map-loader": "^0.1.5",
-    "typescript": "^2.1.5",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "awesome-typescript-loader": "^3.1.3",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.3.3",
+    "webpack": "^2.6.0",
+    "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server",
+    "static": "static -at 0.0.0.0 dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
