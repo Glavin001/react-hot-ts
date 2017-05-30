@@ -7,11 +7,6 @@
         "target": "es5",
         "jsx": "react"
     },
-    "files": [
-        "./declarations.d.ts",
-        "./node_modules/@types/webpack-env/index.d.ts",
-        "./src/index.tsx"
-    ],
     "exclude": [
         "node_modules"
     ]
