@@ -1,11 +1,8 @@
 import * as React from "react";
 
-export default class App extends React.Component<any, any> {
+export default class App extends React.Component<{}, { count: number; }> {
     interval: number;
-    constructor() {
-        super();
-        this.state = { count: 0 };
-    }
+    state = { count: 0 };
 
     //This state will be maintained during hot reloads
     componentWillMount() {
