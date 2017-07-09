@@ -14,7 +14,7 @@ ReactDOM.render(
 // Hot Module Replacement API
 if (module.hot) {
   module.hot.accept("./App", () => {
-    const NextApp = require<RequireImport>("./App").default;
+    const NextApp = require<{default: typeof App}>("./App").default;
     ReactDOM.render(
       <AppContainer>
         <NextApp />

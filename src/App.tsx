@@ -1,17 +1,14 @@
 import * as React from "react";
 
-export default class App extends React.Component<any, any> {
-    interval: number;
-    constructor() {
-        super();
-        this.state = { count: 0 };
-    }
+export default class App extends React.Component<{}, { count: number; }> {
+    interval: any;
+    state = { count: 0 };
 
     //This state will be maintained during hot reloads
     componentWillMount() {
         this.interval = setInterval(() => {
             this.setState({ count: this.state.count + 1 })
-        }, 1000)
+        }, 1000);
     }
 
     componentWillUnmount() {

@@ -1,8 +1,8 @@
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import * as webpack from "webpack";
+import * as path from "path";
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+const config: webpack.Configuration = {
     entry: [
         "react-hot-loader/patch",
         "./src/index.tsx",
@@ -56,3 +56,5 @@ module.exports = {
     }
 
 };
+
+export default config;
