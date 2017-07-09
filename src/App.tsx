@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export default class App extends React.Component<{}, { count: number; }> {
-    interval: any;
+    interval: NodeJS.Timer;
     state = { count: 0 };
 
     //This state will be maintained during hot reloads
