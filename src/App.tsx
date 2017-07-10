@@ -1,18 +1,18 @@
 import * as React from "react";
 
 export default class App extends React.Component<{}, { count: number; }> {
-    interval: NodeJS.Timer;
+    interval: number;
     state = { count: 0 };
 
     //This state will be maintained during hot reloads
     componentWillMount() {
-        this.interval = setInterval(() => {
+        this.interval = window.setInterval(() => {
             this.setState({ count: this.state.count + 1 })
         }, 1000);
     }
 
     componentWillUnmount() {
-        clearInterval(this.interval);
+        window.clearInterval(this.interval);
     }
 
     render() {
