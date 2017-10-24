@@ -1,26 +1,26 @@
-import * as React from "react";
+import * as React from 'react';
+import { withStyles } from 'material-ui/styles';
+import withRoot from './withRoot';
+const styles = {
+  main: {
+    backgroundColor: 'blue'
+  }
+};
 
-export default class App extends React.Component<{}, { count: number; }> {
-    interval: number;
-    state = { count: 0 };
-
-    //This state will be maintained during hot reloads
-    componentWillMount() {
-        this.interval = window.setInterval(() => {
-            this.setState({ count: this.state.count + 1 })
-        }, 1000);
-    }
-
-    componentWillUnmount() {
-        window.clearInterval(this.interval);
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Hello world!</h1>
-                <div>Welcome to hot-reloading React written in TypeScript! {this.state.count}</div>
-            </div>
-        );
-    }
+export class App extends React.Component<any, any> {
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <h2>Welcome to React</h2>
+        </div>
+        <p className={""}>
+          To get started, edit <code>src/App.js</code> and save to
+          reload.
+        </p>
+      </div>
+    );
+  }
 }
+
+export default withRoot(withStyles(styles)(App)) as any;
